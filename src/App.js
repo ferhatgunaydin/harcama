@@ -1,29 +1,30 @@
 import React from 'react';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import logo from './logo.svg';
+import './App.css';
 import Dashboard from './components/Dashboard';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-    background: {
-      default: '#f4f6f8',
-    },
-  },
-});
-
-const App = () => {
+function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Dashboard />
-    </ThemeProvider>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Şirket Yetkilileri Harcama Takip Uygulaması
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          React'i Öğrenin
+        </a>
+      </header>
+      <main>
+        <Dashboard />
+      </main>
+    </div>
   );
-};
+}
 
 export default App;
